@@ -30,6 +30,24 @@
 
                 </tr>
             </thead>
+            <tbody>
+                {{ range .pasien }}
+                  <tr>
+                    <td>{{ .NamaLengkap }}</td>
+                    <td>{{ .NIK }}</td>
+                    <td>{{ .JenisKelamin }}</td>
+                    <td>{{ .TempatLahir }}</td>
+                    <td>{{ .TanggalLahir }}</td>
+                    <td>{{ .Alamat }}</td>
+                    <td>{{ .NoHP }}</td>
+                    <td>
+                      <a href="#" class="btn btn-sm btn-warning">Edit</a>
+                      <a href="#" onclick="return confirm('Apakah adnda yakin ingin menghapus data?')" class="btn btn-sm btn-danger">Hapus</a>
+                    </td>
+                  </tr>
+
+                {{ end }}
+            </tbody>
         </table>
     </div>
 
