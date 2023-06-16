@@ -16,5 +16,4 @@ func main() {
 	http.HandleFunc("/pasien/delete", pasiencontroller.Delete)
 
 	http.ListenAndServe(":8080", nil)
-
 }
